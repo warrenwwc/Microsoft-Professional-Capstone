@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>Microsoft Professional Program Capstone - Front-End Web Developer </title>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+  <script src="js/app.js"></script>
+  
+
+</head>
+<body ng-controller="mainController">
+
+  <div class="ui fixed inverted menu">
+    <div class="ui fluid container">
+      <a href="#" class="header item">
+        MPP Frontend Capstone
+      </a>
+      <div class="right menu">
+        <a href="#!shopping" class="ui item">
+          Shop All
+        </a>
+        <a href="#!cart" class="ui item">
+          <i class="shopping basket icon"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui main container">
+    
+    <div ng-view></div>
+    
+  </div>
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+      <div class="ui horizontal inverted small divided link list">
+        <a class="item" href="#!about">About</a>
+        <a class="item" href="#!contact">Contact</a>
+      </div>
+      <div class="ui inverted section divider"></div>
+      <p>This project is for Microsoft: DEV238x Microsoft Professional Capstone : Front-End Web Developer</p>
+      <p>Source code: </p>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function(){
+
+       $('.ui.accordion').accordion('refresh');
+
+    });
+    
+  </script>
+</body>
+
+</html>
