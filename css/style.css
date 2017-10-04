@@ -17,3 +17,12 @@ body {
 .ui.card>.image>img, .ui.cards>.card>.image>img {
     height: 30vh;
 }
+.attached.ui.button {
+  display: inline-block; 
+  height: 100%;
+}
+.slide {
+  display: block;
+    width: 100%;
+    height: auto;
+}

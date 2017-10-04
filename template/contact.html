@@ -1,0 +1,37 @@
+<div class="ui grid" ng-init="RunJ()">
+  <div class="eight wide column">
+    <form class="ui form">
+      <div class="field">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Name">
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Email">
+      </div>
+      <div class="field">
+        <label>Subject</label>
+        <select class="ui dropdown" name="subject">
+          <option value="">Select Subject</option>
+          <option value="choice1">Complain</option>
+          <option value="choice2">Inquiry</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Message</label>
+        <textarea name="message" cols="5" placeholder="Message"></textarea>
+      </div>
+      
+      <div class="ui error message"></div>
+
+      <button class="ui submit fluid secondary basic button">Submit</button>
+    </form>
+  </div>
+  <div class="eight wide column">
+    <h1 class="ui header">Contact</h1>
+    <h2 class="ui header">Please leave comment on this demo cart</h2>
+    <div class="ui divider"></div>
+    <h2 class="ui header">Email: a-wawon@microsoft.com</h2>
+    
+  </div>
+</div>

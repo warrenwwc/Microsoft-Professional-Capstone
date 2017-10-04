@@ -1,1 +1,102 @@
-<h1>Hi</h1>
+<h2 class="ui header">
+  Welcome to MPP Demo 
+  <a href="#!shopping" class="ui right floated labeled icon primary button">
+    Shop Now
+    <i class="right chevron icon"></i>
+  </a>
+</h2>
+<h5 class="ui header">
+  Slider items are random every time you refresh 
+  <span style="float:right">
+    <div class="ui checkbox">
+      <input type="checkbox" name="checkbox" ng-model="toggle" ng-change="AutoSlide()">
+      <label>Toggle Slide Show</label>
+    </div>
+  </span>
+</5>
+<div class="ui internally celled grid">
+  <div class="row">
+    <div class="one wide column">
+      <button class="ui left arrow-left secondary basic fluid attached button" ng-click="ChangeSlide(false)">
+        <i class="left chevron icon"></i>
+      </button>
+    </div>
+    <div class="fourteen wide column">
+      
+      <div class="ui grid" id="slide1" style="display:none">
+        <div class="column">
+          <a style="background-image:url({{prod[0].imagelink}}); background-repeat:no-repeat;">
+            <img class="slide" ng-src="{{prod[0].imagelink}}" />
+          </a>
+        </div>
+      </div>
+      
+      <div class="ui two column grid" id="slide2">
+        <div class="column">
+          <a style="background-image:url({{prod[1].imagelink}}); background-repeat:no-repeat;">
+            <img class="slide" ng-src="{{prod[1].imagelink}}" />
+          </a>
+        </div>
+        <div class="column">
+          <a style="background-image:url({{prod[2].imagelink}}); background-repeat:no-repeat;">
+            <img class="slide" ng-src="{{prod[2].imagelink}}" />
+          </a>
+        </div>
+      </div>
+      
+      <div class="ui two column grid" id="slide3" style="display:none">
+        <div class="eleven wide column">
+          <a style="background-image:url({{prod[3].imagelink}}); background-repeat:no-repeat;">
+            <img class="slide" ng-src="{{prod[3].imagelink}}" />
+          </a>
+        </div>
+        <div class="five wide column">
+          <div class="row">
+          <a style="background-image:url({{prod[4].imagelink}}); background-repeat:no-repeat;">
+            <img class="slide" ng-src="{{prod[4].imagelink}}" />
+          </a>
+          </div>
+          <div class="row">
+          <a style="background-image:url({{prod[5].imagelink}}); background-repeat:no-repeat;">
+            <img class="slide" ng-src="{{prod[5].imagelink}}" />
+          </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="ui two column grid" id="slide4" style="display:none">
+        <div class="row">
+          <div class="column">
+          <a style="background-image:url({{prod[6].imagelink}}); background-repeat:no-repeat;">
+            <img class="slide" ng-src="{{prod[6].imagelink}}" />
+          </a>
+          </div>
+          <div class="column">
+          <a style="background-image:url({{prod[7].imagelink}}); background-repeat:no-repeat;">
+            <img class="slide" ng-src="{{prod[7].imagelink}}" />
+          </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+          <a style="background-image:url({{prod[8].imagelink}}); background-repeat:no-repeat;">
+            <img class="slide" ng-src="{{prod[8].imagelink}}" />
+          </a>
+          </div>
+          <div class="column">
+          <a style="background-image:url({{prod[9].imagelink}}); background-repeat:no-repeat;">
+            <img class="slide" ng-src="{{prod[9].imagelink}}" />
+          </a>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+    <div class="one wide column">
+      <button class="right fluid secondary basic attached ui button" ng-click="ChangeSlide(true)">
+        <i class="right chevron icon"></i>
+      </button>
+    </div>
+  </div>
+</div>

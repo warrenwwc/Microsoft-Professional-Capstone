@@ -36,11 +36,65 @@
 
 	app.controller('mainController', function($scope, $rootScope, $http) {
       $rootScope.cart = [];
+      $scope.prod = [];
+      $scope.currentSlide = 2;
+      $scope.toggle = false;
+      $scope.maxSlide = 4;
+      
       $http.get('https://webmppcapstone.blob.core.windows.net/data/itemsdata.json')
         .then(function(response) {
-          $rootScope.data = response.data;
+          $rootScope.data = response.data; 
+        
+          for (i = 0; i < 10; i++) {
+            let dataRan = $rootScope.data[Math.floor(Math.random()*$rootScope.data.length)];
+            let subRan = dataRan.subcategories[Math.floor(Math.random()*dataRan.subcategories.length)];
+            let itemRan = subRan.items[Math.floor(Math.random()*subRan.items.length)];
+            $scope.prod.push(itemRan);
+            
+          }
         });
-
+      
+      $scope.ChangeSlide = function(isRight) {
+        if (isRight) {
+          $('#slide' + $scope.currentSlide).transition('fade right');
+          if ($scope.currentSlide >= $scope.maxSlide) {
+            $scope.currentSlide = 1;
+          }
+          else {
+            $scope.currentSlide++;
+          }
+          $('#slide' + $scope.currentSlide).transition('fade right');
+        }
+        else {
+          $('#slide' + $scope.currentSlide).transition('fade left');
+          if ($scope.currentSlide <= 1) {
+            $scope.currentSlide = $scope.maxSlide;
+          }
+          else {
+            $scope.currentSlide--;
+          }
+          $('#slide' + $scope.currentSlide).transition('fade left');
+        }
+      }
+      
+      $scope.AutoSlide = function() {
+        console.log("hi");
+        if ($scope.toggle) {
+          $scope.auto = setInterval(function(){ 
+            $('#slide' + $scope.currentSlide).transition('fade right');
+            if ($scope.currentSlide >= $scope.maxSlide) {
+              $scope.currentSlide = 1;
+            }
+            else {
+              $scope.currentSlide++;
+            }
+            $('#slide' + $scope.currentSlide).transition('fade right');
+          }, 3000);
+        }
+        else {
+          clearInterval($scope.auto);
+        }
+      }
 	});
 
 	app.controller('aboutController', function($scope, $rootScope) {
@@ -49,6 +103,51 @@
 
 	app.controller('contactController', function($scope, $rootScope) {
 
+      $scope.RunJ = function() {
+        $('.ui.dropdown').dropdown();
+        $('.ui.form')
+          .form({
+            fields: {
+              name: {
+                identifier: 'name',
+                rules: [
+                  {
+                    type   : 'empty',
+                    prompt : 'Please enter your name'
+                  }
+                ]
+              },
+              email: {
+                identifier: 'email',
+                rules: [
+                  {
+                    type   : 'empty',
+                    prompt : 'Please enter your Email'
+                  }
+                ]
+              },
+              subject: {
+                identifier: 'subject',
+                rules: [
+                  {
+                    type   : 'empty',
+                    prompt : 'Please select a subject'
+                  }
+                ]
+              },
+              message: {
+                identifier: 'message',
+                rules: [
+                  {
+                    type   : 'empty',
+                    prompt : 'Please enter your message'
+                  }
+                ]
+              }
+            }
+          });
+      }
+      
 	});
 
 	app.controller('cartController', function($scope, $rootScope) {
