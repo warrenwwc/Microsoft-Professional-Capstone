@@ -45,12 +45,18 @@
         .then(function(response) {
           $rootScope.data = response.data; 
         
-          for (i = 0; i < 10; i++) {
+          let count = 0;
+          while (count < 10) {
             let dataRan = $rootScope.data[Math.floor(Math.random()*$rootScope.data.length)];
             let subRan = dataRan.subcategories[Math.floor(Math.random()*dataRan.subcategories.length)];
             let itemRan = subRan.items[Math.floor(Math.random()*subRan.items.length)];
-            $scope.prod.push(itemRan);
             
+            if ((itemRan !== undefined || itemRan !== null) && (!$scope.prod.includes(itemRan))) {
+              console.log(itemRan);
+              $scope.prod.push(itemRan);
+              count++;
+            }  
+ 
           }
         });
       
