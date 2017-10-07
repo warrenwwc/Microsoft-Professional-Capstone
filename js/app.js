@@ -51,7 +51,7 @@
             let subRan = dataRan.subcategories[Math.floor(Math.random()*dataRan.subcategories.length)];
             let itemRan = subRan.items[Math.floor(Math.random()*subRan.items.length)];
             
-            if ((itemRan !== undefined || itemRan !== null) && (!$scope.prod.includes(itemRan))) {
+            if ((itemRan !== undefined) && (!$scope.prod.includes(itemRan))) {
               console.log(itemRan);
               $scope.prod.push(itemRan);
               count++;
