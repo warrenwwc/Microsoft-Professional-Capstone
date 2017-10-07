@@ -8,9 +8,9 @@
  - Semantic UI
 ---
 ## Screenshots
-![](screenshots/home.png)
-![](screenshots/shopping.png)
-![](screenshots/product.png)
-![](screenshots/cart.png)
-![](screenshots/contact.png)
-![](screenshots/about.png)
+![](screenshots/home.PNG)
+![](screenshots/shopping.PNG)
+![](screenshots/product.PNG)
+![](screenshots/cart.PNG)
+![](screenshots/contact.PNG)
+![](screenshots/about.PNG)
