@@ -8,9 +8,9 @@ http://wwwc.azurewebsites.net/
  - Semantic UI
 ---
 ## Screenshots
-![](screenshots/home.PNG)
-![](screenshots/shopping.PNG)
-![](screenshots/product.PNG)
-![](screenshots/cart.PNG)
-![](screenshots/contact.PNG)
-![](screenshots/about.PNG)
+![](screenshot/home.PNG)
+![](screenshot/shopping.PNG)
+![](screenshot/product.PNG)
+![](screenshot/cart.PNG)
+![](screenshot/contact.PNG)
+![](screenshot/about.PNG)
